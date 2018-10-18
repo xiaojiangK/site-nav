@@ -175,7 +175,7 @@ article.item ul li a:hover {
 }
 
 .app-footer img{
-    vertical-align: middle;
+    vertical-align: sub;
     margin-left: 5px;
     height: 18px;
 }
