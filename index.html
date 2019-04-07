@@ -509,6 +509,7 @@
 
         var clipboard = new Clipboard('.copyBtn').on('success', function(e) {
             var e = e || window.event;
+            alert('恭喜您！复制成功！！');
             $('.pupup').fadeOut();
             console.log(e);
         }).on('error', function(e) {});
