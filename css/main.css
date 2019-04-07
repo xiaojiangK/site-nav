@@ -4,6 +4,7 @@ body {
     font-size: 14px;
     font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
     width: 100%;
+    background: #fff;
     cursor: pointer;
     overflow-y: scroll;
 }
