@@ -349,12 +349,13 @@ article.item ul li a:hover {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
     background: rgba(0,0,0,.5);
 }
 .explain{
     top: 50%;
     left: 50%;
-    z-index: 999;
+    z-index: 9999;
     width: 90%;
     max-width: 320px;
     position: fixed;
