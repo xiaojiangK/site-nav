@@ -361,10 +361,11 @@ article.item ul li a:hover {
     max-width: 320px;
     position: fixed;
     background: #fff;
+    margin-top: -90px;
     border-radius: 8px;
     box-sizing: border-box;
     padding: 21px 19px 0 17px;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, 0, 0);
 }
 .explain .title{
     color: #181818;
