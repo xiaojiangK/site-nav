@@ -532,6 +532,15 @@
             var e = e || window.event;
             alert('恭喜您！复制成功！！');
             $('.pupup, .pupup2').fadeOut();
+            if (e.text == '程序猿陌小江') {
+                if (window.confirm('是否确定前往作者头条首页')) {
+                    location.href = 'https://www.toutiao.com/c/user/74299506922/#mid=1585115888403469';
+                }
+            } else {
+                if (window.confirm('是否确定前往作者快手首页')) {
+                    location.href = 'https://live.kuaishou.com/profile/xiaojiangK';
+                }
+            }
             console.log(e);
         }).on('error', function(e) {});
 
