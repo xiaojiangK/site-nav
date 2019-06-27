@@ -50,6 +50,17 @@
             <div class="copyBtn" data-clipboard-text="xiaojiangK">复制一下</div>
         </div>
     </div>
+    <div class="pupup2">
+        <div class="maks"></div>
+        <div class="explain">
+            <div class="title">我的头条号</div>
+            <div class="content">
+                <div>头条号：程序猿陌小江</div>
+                <div>企鹅号：程序猿陌小江</div>
+            </div>
+            <div class="copyBtn" data-clipboard-text="程序猿陌小江">复制一下</div>
+        </div>
+    </div>
     <section class="layout main-wrap  content">
         <section class='col-main clearfix'>
             <article class="mainarea item" style="display:block;">
@@ -65,6 +76,12 @@
                         <h4 class="sub_title">快手分享</h4>
                         <ul>
                             <li class="kuaishow"><a href="javascript:;" class="kuaishow">xiaojiangK</a></li>
+                        </ul>
+                    </section>
+                    <section class="sub_mod">
+                        <h4 class="sub_title">头条分享</h4>
+                        <ul>
+                            <li class="toutiao"><a href="javascript:;" class="toutiao">程序猿小江</a></li>
                         </ul>
                     </section>
                     <section class="sub_mod">
@@ -502,15 +519,20 @@
         $('.kuaishow').on('click', function (){
             $('.pupup').fadeIn();
         });
-
-        $('.pupup .maks').on('click', function (){
-            $('.pupup').fadeOut();
+        
+        // 复制头条号
+        $('.toutiao').on('click', function (){
+            $('.pupup2').fadeIn();
+        });
+        
+        $('.maks').on('click', function (){
+            $('.pupup, .pupup2').fadeOut();
         });
 
         var clipboard = new Clipboard('.copyBtn').on('success', function(e) {
             var e = e || window.event;
             alert('恭喜您！复制成功！！');
-            $('.pupup').fadeOut();
+            $('.pupup, .pupup2').fadeOut();
             console.log(e);
         }).on('error', function(e) {});
 

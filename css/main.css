@@ -344,7 +344,10 @@ article.item ul li a:hover {
 .pupup{
     display: none;
 }
-.pupup .maks{
+.pupup2{
+    display: none;
+}
+.maks{
     width: 100%;
     height: 100%;
     position: fixed;
