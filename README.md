@@ -1,5 +1,5 @@
-﻿# 我的导航
+# 我的导航
 
-> 站点地址：[我的导航](https://xiaojiangK.github.io/site-nav/)
+> 站点地址：[我的导航](https://xiaojiangk.gitee.io/site-nav/)
 
 
