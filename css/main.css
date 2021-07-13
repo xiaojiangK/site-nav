@@ -342,10 +342,7 @@ article.item ul li a:hover {
 
 }
 
-.pupup{
-    display: none;
-}
-.pupup2{
+.popup{
     display: none;
 }
 .maks{
@@ -387,7 +384,7 @@ article.item ul li a:hover {
     line-height: 25px;
     margin: 0 0 5px;
 }
-.explain .copyBtn{
+.explain .copy{
     width: 100%;
     height: 44px;
     color: #FF6634;

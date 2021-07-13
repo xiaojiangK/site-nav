@@ -7,7 +7,7 @@
     <meta name="keywords" content="前端导航,大前端网址导航,前端导航,前端开发导航,前端工具导航"/>
     <meta name="description" content="前端导航-作者：陌小江; 前端导航是由陌小江提供的专为前端开发者服务的网址导航教程，前端导航整理了国内外非常优秀的前端开发网站，并提供更多相关行业的网站网址，意图给到前端开发者一个完善而又良好的网址导航，是前端行业人员值得收藏的前端导航。"/>
     <meta name="author" content="xiaojiangK"/>
-    <link rel="shortcut icon" href="img/favicon.jpg"/>
+    <link rel="shortcut icon" href="img/favicon.png"/>
     <title>前端导航-陌小江</title>
     <script src="js/html5shiv.js"></script>
     <meta name="viewport"
@@ -38,28 +38,16 @@
             <span class="icon-bar"></span>
         </div>
     </header>
-    <div class="pupup">
+
+    <div class="popup">
         <div class="maks"></div>
         <div class="explain">
-            <div class="title">我的快手号</div>
-            <div class="content">
-                <div>快手号：xiaojiangK</div>
-                <div>昵称：江哥哥（程序猿）</div>
-            </div>
-            <div class="copyBtn" data-clipboard-text="xiaojiangK">复制一下</div>
+            <div class="title"></div>
+            <div class="content"></div>
+            <div class="copy">复制一下</div>
         </div>
     </div>
-    <div class="pupup2">
-        <div class="maks"></div>
-        <div class="explain">
-            <div class="title">我的头条号</div>
-            <div class="content">
-                <div>头条号：程序猿陌小江</div>
-                <div>企鹅号：程序猿陌小江</div>
-            </div>
-            <div class="copyBtn" data-clipboard-text="程序猿陌小江">复制一下</div>
-        </div>
-    </div>
+
     <section class="layout main-wrap  content">
         <section class='col-main clearfix'>
             <article class="mainarea item" style="display:block;">
@@ -68,30 +56,42 @@
                     <section class="sub_mod">
                         <h4 class="sub_title">个人博客</h4>
                         <ul>
-                            <li><a href="https://segmentfault.com/u/xiaojiangk" target="_blank">xiaojiangK</a></li>
+                            <li><a href="https://www.cnblogs.com/xiaojiangk/" target="_blank">xiaojiangK</a></li>
                         </ul>
                     </section>
                     <section class="sub_mod">
-                        <h4 class="sub_title">快手 / 头条分享</h4>
+                        <h4 class="sub_title">自媒体平台</h4>
                         <ul>
-                            <li class="kuaishow"><a href="javascript:;" class="kuaishow">xiaojiangK</a></li>
-                            <li class="toutiao"><a href="javascript:;" class="toutiao">程序猿陌小江</a></li>
+                            <li><a href="javascript:;" class="media">快手</a></li>
+                            <li><a href="javascript:;" class="media">抖音</a></li>
+                            <li><a href="javascript:;" class="media">视频号</a></li>
+                            <li><a href="javascript:;" class="media">头条号</a></li>
+                            <li><a href="javascript:;" class="media">百家号</a></li>
+                            <li><a href="javascript:;" class="media">企鹅号</a></li>
+                            <li><a href="javascript:;" class="media">大鱼号</a></li>
                         </ul>
                     </section>
                     <section class="sub_mod">
                         <h4 class="sub_title">站点</h4>
                         <ul>
                             <li><a href="https://segmentfault.com/u/xiaojiangk" target="_blank">SegmentFault</a></li>
-                            <li><a href="https://xiaojiangk.gitee.io/full-stack-development/" target="_blank">全栈开发</a></li>
-                            <li><a href="https://xiaojiangk.gitee.io/site-nav/" target="_blank">前端导航</a></li>
                             <li><a href="http://www.cnblogs.com/xiaojiangk/" target="_blank">Cnblogs</a></li>
-                            <li><a href="https://xiaojiangk.gitee.io/qxadmin/" target="_blank">QxAdmin UI库</a></li>
+                            <li><a href="https://xiaojiangk.gitee.io/qxadmin/" target="_blank">QxAdmin UI</a></li>
+                            <li><a href="https://xiaojiangk.gitee.io/site-nav/" target="_blank">前端导航</a></li>
+                            <li><a href="https://xiaojiangk.gitee.io/buycar/" target="_blank">购车计算器</a></li>
                         </ul>
                     </section>
                     <section class="sub_mod">
                         <h4 class="sub_title">Gitee</h4>
                         <ul>
                             <li><a href="https://gitee.com/xiaojiangK" target="_blank">xiaojiangK-Gitee</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="sub_mod">
+                        <h4 class="sub_title">Github</h4>
+                        <ul>
+                            <li><a href="https://github.com/xiaojiangK" target="_blank">xiaojiangK-Github</a>
                             </li>
                         </ul>
                     </section>
@@ -619,34 +619,98 @@
         });
         $('.col-main .mainarea').css("min-height", $win - 269 + 'px');
 
-        // 复制快手号
-        $('.kuaishow').on('click', function (){
-            $('.pupup').fadeIn();
-        });
-        
-        // 复制头条号
-        $('.toutiao').on('click', function (){
-            $('.pupup2').fadeIn();
-        });
-        
+        // 自媒体弹窗
+        $('.media').each(function (index) {
+            $(this).on('click', function (){
+                let title = ''
+                let content = '<div>昵称：小江电影V</div>'
+                let clipboardText = '小江电影V'
+
+                switch(index) {
+                    case 0:
+                        title = '我的快手号'
+                        content = `
+                            <div>ID：xiaojiangK</div>
+                            <div>昵称：小江电影TV</div>
+                        `
+                        clipboardText = '小江电影TV'
+                        break;
+                    case 1:
+                        title = '我的抖音号'
+                        content = `
+                            <div>ID：xiaojiang_k</div>
+                            <div>昵称：小江电影TV</div>
+                        `
+                        clipboardText = '小江电影TV'
+                        break;
+                    case 2:
+                        title = '我的视频号'
+                        content = `<div>昵称：小江电影TV</div>`
+                        clipboardText = '小江电影TV'
+                        break;
+                    case 3:
+                        title = '我的头条号'
+                        break;
+                    case 4:
+                        title = '我的百家号'
+                        break;
+                    case 5:
+                        title = '我的企鹅号'
+                        break;
+                    case 6:
+                        title = '我的大鱼号'
+                        break;
+                }
+
+                $('.popup .title').text(title)
+                $('.popup .content').html(content)
+                $('.popup .copy').attr({
+                    'data-target': index,
+                    'data-clipboard-text': clipboardText
+                })
+                $('.popup').fadeIn()
+            })
+        })
+
         $('.maks').on('click', function (){
-            $('.pupup, .pupup2').fadeOut();
+            $('.popup').fadeOut()
         });
 
-        var clipboard = new Clipboard('.copyBtn').on('success', function(e) {
-            var e = e || window.event;
-            alert('恭喜您！复制成功！！');
-            $('.pupup, .pupup2').fadeOut();
-            if (e.text == '程序猿陌小江') {
-                if (window.confirm('是否确定前往作者头条首页')) {
-                    location.href = 'https://www.toutiao.com/c/user/74299506922/#mid=1585115888403469';
-                }
-            } else {
-                if (window.confirm('是否确定前往作者快手首页')) {
-                    location.href = 'https://live.kuaishou.com/profile/xiaojiangK';
-                }
+        var clipboard = new Clipboard('.copy').on('success', function(e) {
+            var e = e || window.event
+            $('.popup').fadeOut()
+
+            switch(Number($(e.trigger).attr('data-target'))) {
+                case 0:
+                    if (window.confirm('是否前往作者快手主页?')) {
+                        window.open('https://live.kuaishou.com/profile/xiaojiangK')
+                    }
+                    break;
+                case 1:
+                    if (window.confirm('是否前往作者抖音主页?')) {
+                        window.open('https://www.douyin.com/search/小江电影TV?publish_time=0&sort_type=0&source=normal_search&type=video')
+                    }
+                    break;
+                case 2:
+                    alert('复制成功，请打开微信-视频号搜索！')
+                    break;
+                case 3:
+                    if (window.confirm('是否前往作者头条号主页?')) {
+                        window.open('https://www.toutiao.com/c/user/74299506922/#mid=1585115888403469')
+                    }
+                    break;
+                case 4:
+                    if (window.confirm('是否前往作者百家号主页?')) {
+                        window.open('https://haokan.baidu.com/author/1703519218734070')
+                    }
+                    break;
+                case 5:
+                    alert('复制成功，请打开腾讯微视/看点/视频/新闻/体育搜索！')
+                    break;
+                case 6:
+                    alert('复制成功，请打开UC/UC头条/土豆/优酷/淘宝/神马搜索！')
+                    break;
             }
-            console.log(e);
         }).on('error', function(e) {});
 
     });
